@@ -1,4 +1,4 @@
-Для работы с программой нужна среда Visual Studio:
+Для работы с программой нужна среда Visual Studio с установленным пакетом System.Data.SqlClient:
 
 1. Скачать файлы с репозитория https://github.com/valkost/ConsoleApp1.git
 2. Открыть файл ConsoleApp1.sln
