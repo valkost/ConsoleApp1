@@ -1,14 +1,18 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using Classes;
+using System;
 
 //массивы объектов классов работников, департаментов, начальников
 EmployeeClass[] employee = new EmployeeClass[7];
 DepartmentClass[] department = new DepartmentClass[3];
 ChiefClass[] chief = new ChiefClass[7];
 
+//путь к базе состоит из пути к исполняющему приложению + имя базы
+string basePath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "Database1.mdf";
+
 //строка подключения к базе
-string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\val\source\repos\ConsoleApp1\ConsoleApp1\Database1.mdf; Integrated Security = True";
+string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + basePath + "; Integrated Security = True";
 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
 //метод покдлючения к базе
